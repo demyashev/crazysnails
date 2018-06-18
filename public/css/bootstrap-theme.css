@@ -475,6 +475,14 @@ fieldset[disabled] .btn-danger.active {
 .navbar-fixed-bottom {
     border-radius: 0;
 }
+
+.navbar-default .navbar-collapse, 
+.navbar-default .navbar-form {
+    border-color: var(--color-red);
+}
+.navbar-default .navbar-brand {
+    color: var(--color-red);
+}
 @media (min-width: 768px) {
     .navbar-nav > li > a {
         padding-top: 50px;
@@ -772,15 +780,35 @@ html, body {
                 text-align: left;
             }
 
+                .section h4 > a {
+                    color: var(--color-red);
+                    text-decoration: underline;
+                }
+
 #carousel-news,
 #carousel-news .item,
 #carousel-news .carousel-caption {
     height: 645px;
 }
 
+.carousel-caption {
+    position: relative;
+}
+
 #carousel-news {
     background: var(--color-bg-slider-news);
 }
+
+    #carousel-news .item::after {
+        display: block;
+        content: "";
+        background: rgba(0,0,0,0.65);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
 
     #carousel-news .item h3 {
         font-family: 'Oswald', sans-serif;
@@ -809,6 +837,23 @@ html, body {
 #about p {
     margin: 20px 0;
 }
+    
+    #about ul {
+        margin-bottom: 40px;
+    }
+        #about ul li {
+            list-style-type: none;
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+            #about ul li i {
+                position: absolute;
+                left: -27px;
+                top: 5px;
+                color: var(--color-red);
+                font-size: 12px;
+            }
 
 #about .panel-body {
     padding: 70px 45px;
@@ -923,6 +968,7 @@ html, body {
             #events .day {
                 font-size: 30px;
                 font-weight: 700;
+                padding-top: 2px;
             }
 
             #events .month {
@@ -930,7 +976,7 @@ html, body {
             }
     
     #events .content {
-        height: 150px;
+        height: 200px;
     }
 
     #events .event p {
@@ -1032,4 +1078,9 @@ html, body {
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
+}
+
+#map {
+    widows: 570px;
+    height: 278px;
 }
