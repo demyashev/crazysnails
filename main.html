@@ -8,77 +8,97 @@
 
     <title>Main</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Oswald:400,700&amp;subset=cyrillic" rel="stylesheet">
+
     <!-- Bootstrap core CSS -->
-    <link href="public/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
 
-  </head>
+    <link rel="stylesheet" href="public/css/bootstrap-theme.css">
 
-  <body>
+    <link rel="stylesheet" href="public/css/fa-regular.min.css">
+    <link rel="stylesheet" href="public/css/fontawesome-all.min.css">
+
+</head>
+
+<body>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
+
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Brand</a>
+                
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="public/img/logo.jpg">
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
+                <li class="active"><a href="#carousel-news">Home <span class="sr-only">(current)</span></a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#team">Our team</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#sponsorship">Sponsors</a></li>
+                <li><a href="#contacts">Contact</a></li>
               </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
 
     <!-- Slider -->
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <div id="carousel-news" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
         <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-news" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-news" data-slide-to="1"></li>
+            <li data-target="#carousel-news" data-slide-to="2"></li>
         </ol>
 
         <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="http://placehold.it/1000x500" alt="...">
-                <div class="carousel-caption">
-                    <h3>...</h3>
-                    <p>...</p>
+        <div class="container">
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <div class="carousel-caption">
+                        <h3>Rising Sun Hospice hit the downs MTB<br>24-26 december 2018</h3>
+                        <p>We are delivering amazing bike rides throughout<br>around the world</p> 
+                        <a href="#" class="btn btn-primary" role="button">Join with us</a>
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <img src="http://placehold.it/1000x500" alt="...">
-                <div class="carousel-caption">
-                    <h3>...</h3>
-                    <p>...</p>
+                <div class="item">
+                    <div class="carousel-caption">
+                        <h3>Rising Sun Hospice hit the downs MTB<br>24-26 december 2018</h3>
+                        <p>We are delivering amazing bike rides throughout<br>around the world</p> 
+                        <a href="#" class="btn btn-primary" role="button">Join with us</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="carousel-caption">
+                        <h3>Rising Sun Hospice hit the downs MTB<br>24-26 december 2018</h3>
+                        <p>We are delivering amazing bike rides throughout<br>around the world</p> 
+                        <a href="#" class="btn btn-primary" role="button">Join with us</a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <a class="left carousel-control" href="#carousel-news" role="button" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <a class="right carousel-control" href="#carousel-news" role="button" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
@@ -87,68 +107,461 @@
     <!-- Page Content -->
     <div class="container">
     
-        <!--  -->
-        <div class="row">
-            <div class="col-xs-12 col-md-4">
-                <a href="#" class="thumbnail">
-                    <img src="http://placehold.it/100x100" alt="...">
-                    <div class="title">
-                        <h3>Ride</h3>
-                        <div class="icon">
-                            >
+        <!-- Last events -->
+        <div class="section" id="events-last">
+            <div class="row">
+                <div class="col-xs-12 col-md-4">
+                    <a href="#" class="event-last thumbnail">
+                        <img src="http://placehold.it/370x290" alt="...">
+                        <div class="title">
+                            <h3>Ride</h3>
+                            <div class="icon">
+                                <i class="fas fa-angle-right"></i>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
 
-            <div class="col-xs-12 col-md-4">
-                <a href="#" class="thumbnail">
-                    <img src="http://placehold.it/100x100" alt="...">
-                    <div class="title">
-                        <h3>Ride</h3>
-                        <div class="icon">
-                            >
+                <div class="col-xs-12 col-md-4">
+                    <a href="#" class="event-last thumbnail">
+                        <img src="http://placehold.it/370x290" alt="...">
+                        <div class="title">
+                            <h3>Ride</h3>
+                            <div class="icon">
+                                <i class="fas fa-angle-right"></i>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
+                    </a>
+                </div>
 
-            <div class="col-xs-12 col-md-4">
-                <a href="#" class="thumbnail">
-                    <img src="http://placehold.it/100x100" alt="...">
-                    <div class="title">
-                        <h3>Ride</h3>
-                        <div class="icon">
-                            >
+                <div class="col-xs-12 col-md-4">
+                    <a href="#" class="event-last thumbnail">
+                        <img src="http://placehold.it/370x290" alt="...">
+                        <div class="title">
+                            <h3>Ride</h3>
+                            <div class="icon">
+                                <i class="fas fa-angle-right"></i>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </div>
+    </div>
 
-        <!-- About our club -->
-        <div class="row">
-            <div class="col-md-8">
-                <h2>About our club</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aspernatur, aut veniam blanditiis veritatis, eum maxime in doloribus animi totam laborum velit obcaecati. Perspiciatis deleniti est dignissimos fuga quod, ex.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsum, quae, enim accusamus distinctio a ad dolores repellendus cum. Voluptas distinctio praesentium iure amet modi libero suscipit ipsa iste quas!</p>
-                <a href="#" class="btn btn-default" role="button">Read more</a>
+    
+    <div class="section section-bg-gray lead-left" id="about">
+    
+        <div class="container">
+            <!-- About our club -->
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="title">
+                        <h2>About our club</h2> 
+                    </div>
+                    <p>
+                        <strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aspernatur, aut veniam blanditiis veritatis, eum maxime in doloribus animi totam laborum velit obcaecati. Perspiciatis deleniti est dignissimos fuga quod, ex.</strong>
+                    </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsum, quae, enim accusamus distinctio a ad dolores repellendus cum. Voluptas distinctio praesentium iure amet modi libero suscipit ipsa iste quas!</p>
+                    <a href="#" class="btn btn-default" role="button">Read more</a>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-danger">
+                        <div class="panel-body">
+                            <h3>Welcome to RC Crazy Snails</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum deleniti voluptate dolor, cum alias ad impedit. Ratione, id nulla aspernatur porro illo.</p>
+                            <p class="owner"><strong>Oliver Liam</strong>, president</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <div class="panel panel-danger">
-                    <div class="panel-body">
-                        <h3>Welcome to RC Crazy Snails</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum deleniti voluptate dolor, cum alias ad impedit. Ratione, id nulla aspernatur porro illo, pariatur, ex assumenda iusto repellat autem rerum vel.</p>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- Events -->
+        <div class="section" id="events">
+            <div class="title">
+                <h2>Events</h2>
+            </div>
+            
+            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eos, accusantium sequi voluptates deserunt debitis nesciunt fugiat, perspiciatis corporis. Labore consectetur ipsum incidunt consequatur! Eligendi quia consequatur quod magni sit.</h4>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="thumbnail event">
+                        <img src="//placehold.it/370x180" alt="">
+                        <div class="meta">
+                            <div class="date">
+                                <span class="day">22</span>
+                                <span class="month">Sept</span>
+                            </div>
+                            <div class="place">
+                                <div class="time">
+                                    <i class="far fa-clock"></i> 11:00 - 19:00
+                                </div>
+                                <div class="city">
+                                    <i class="fas fa-map-marker-alt"></i> Texas
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>Hill gladiator of the year</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit cumque sint inventore explicabo, iusto, odit fugit pariatur veritatis obcaecati omnis.</p>
+                        </div>
+                        <a href="#" class="btn btn-default" role="button">Learn more</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail event">
+                        <img src="//placehold.it/370x180" alt="">
+                        <div class="meta">
+                            <div class="date">
+                                <span class="day">22</span>
+                                <span class="month">Sept</span>
+                            </div>
+                            <div class="place">
+                                <div class="time">
+                                    <i class="far fa-clock"></i> 11:00 - 19:00
+                                </div>
+                                <div class="city">
+                                    <i class="fas fa-map-marker-alt"></i> Texas
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>Hill gladiator of the year</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit cumque sint inventore explicabo, iusto, odit fugit pariatur veritatis obcaecati omnis.</p>
+                        </div>
+                        <a href="#" class="btn btn-default" role="button">Learn more</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail event">
+                        <img src="//placehold.it/370x180" alt="">
+                        <div class="meta">
+                            <div class="date">
+                                <span class="day">22</span>
+                                <span class="month">Sept</span>
+                            </div>
+                            <div class="place">
+                                <div class="time">
+                                    <i class="far fa-clock"></i> 11:00 - 19:00
+                                </div>
+                                <div class="city">
+                                    <i class="fas fa-map-marker-alt"></i> Texas
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">   
+                            <h3>Hill gladiator of the year</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit cumque sint inventore explicabo, iusto, odit fugit pariatur veritatis obcaecati omnis.</p>
+                        </div>
+                        <a href="#" class="btn btn-default" role="button">Learn more</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Events -->
-        <div class="section">
-            <h2>Events</h2>
+    </div>
+
+    <!-- Notify -->
+    <div class="section notify" id="join">
+        <div class="container">
+            <p>Вступить в наш клуб может каждый, кто не спешит по жизни</p>
+            <a href="#" class="btn btn-primary btn-inverted" role="button">Подать заявку</a>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Gallery -->
+        <div class="section" id="gallery">
+            <div class="title">
+                <h2>Gallery</h2>
+            </div>
             <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eos, accusantium sequi voluptates deserunt debitis nesciunt fugiat, perspiciatis corporis. Labore consectetur ipsum incidunt consequatur! Eligendi quia consequatur quod magni sit.</h4>
-            
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="btn-group btn-group-sm" role="group">
+                        <button type="button" class="btn btn-default active">Left</button>
+                        <button type="button" class="btn btn-default">Middle</button>
+                        <button type="button" class="btn btn-default">Middle</button>
+                        <button type="button" class="btn btn-default">Right</button>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <a href="#" class="image thumbnail">
+                        <img src="//placehold.it/370x247" alt="Example text">
+                        <div class="layer">
+                            <div class="title">Mountain Bike Racing<br><i class="fas fa-search-plus"></i></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <a href="#" class="image thumbnail">
+                        <img src="//placehold.it/370x247" alt="Example text">
+                        <div class="layer">
+                            <div class="title">Mountain Bike Racing<br><i class="fas fa-search-plus"></i></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <a href="#" class="image thumbnail">
+                        <img src="//placehold.it/370x247" alt="Example text">
+                        <div class="layer">
+                            <div class="title">Mountain Bike Racing<br><i class="fas fa-search-plus"></i></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <a href="#" class="image thumbnail">
+                        <img src="//placehold.it/370x247" alt="Example text">
+                        <div class="layer">
+                            <div class="title">Mountain Bike Racing<br><i class="fas fa-search-plus"></i></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <a href="#" class="image thumbnail">
+                        <img src="//placehold.it/370x247" alt="Example text">
+                        <div class="layer">
+                            <div class="title">Mountain Bike Racing<br><i class="fas fa-search-plus"></i></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <a href="#" class="image thumbnail">
+                        <img src="//placehold.it/370x247" alt="Example text">
+                        <div class="layer">
+                            <div class="title">Mountain Bike Racing<br><i class="fas fa-search-plus"></i></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Notify -->
+    <div class="section notify" id="statistics">
+        <div class="container">
+            <div class="col-md-3">
+                <div class="count">500</div>
+                <div class="description">Club members</div>
+            </div>
+            <div class="col-md-3">
+                <div class="count">600</div>
+                <div class="description">Rides completed</div>
+            </div>
+            <div class="col-md-3">
+                <div class="count">199</div>
+                <div class="description">Events organized</div>
+            </div>
+            <div class="col-md-3">
+                <div class="count">299</div>
+                <div class="description">Riders awarded</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="container">
+        
+        <!-- Our team -->
+        <div class="section" id="team">
+            <div class="title">
+                <h2>Our team</h2>
+            </div>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eos, accusantium sequi voluptates deserunt debitis nesciunt fugiat, perspiciatis corporis. Labore consectetur ipsum incidunt consequatur! Eligendi quia consequatur quod magni sit.</h4>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="//placehold.it/270x300" alt="">
+                        <div class="info">
+                            <div class="bio">
+                                <div class="fio">Jacob John</div>
+                                <div class="post">Trainer</div>
+                            </div>
+                            <ul class="links">
+                                <li>
+                                    <a href="#">f</a>
+                                    <a href="#">t</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="//placehold.it/270x300" alt="">
+                        <div class="info">
+                            <div class="bio">
+                                <div class="fio">Jacob John</div>
+                                <div class="post">Trainer</div>
+                            </div>
+                            <ul class="links">
+                                <li>
+                                    <a href="#">f</a>
+                                    <a href="#">t</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="//placehold.it/270x300" alt="">
+                        <div class="info">
+                            <div class="bio">
+                                <div class="fio">Jacob John</div>
+                                <div class="post">Trainer</div>
+                            </div>
+                            <ul class="links">
+                                <li>
+                                    <a href="#">f</a>
+                                    <a href="#">t</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="//placehold.it/270x300" alt="">
+                        <div class="info">
+                            <div class="bio">
+                                <div class="fio">Jacob John</div>
+                                <div class="post">Trainer</div>
+                            </div>
+                            <ul class="links">
+                                <li>
+                                    <a href="#">f</a>
+                                    <a href="#">t</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="//placehold.it/270x300" alt="">
+                        <div class="info">
+                            <div class="bio">
+                                <div class="fio">Jacob John</div>
+                                <div class="post">Trainer</div>
+                            </div>
+                            <ul class="links">
+                                <li>
+                                    <a href="#">f</a>
+                                    <a href="#">t</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="//placehold.it/270x300" alt="">
+                        <div class="info">
+                            <div class="bio">
+                                <div class="fio">Jacob John</div>
+                                <div class="post">Trainer</div>
+                            </div>
+                            <ul class="links">
+                                <li>
+                                    <a href="#">f</a>
+                                    <a href="#">t</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="//placehold.it/270x300" alt="">
+                        <div class="info">
+                            <div class="bio">
+                                <div class="fio">Jacob John</div>
+                                <div class="post">Trainer</div>
+                            </div>
+                            <ul class="links">
+                                <li>
+                                    <a href="#">f</a>
+                                    <a href="#">t</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="//placehold.it/270x300" alt="">
+                        <div class="info">
+                            <div class="bio">
+                                <div class="fio">Jacob John</div>
+                                <div class="post">Trainer</div>
+                            </div>
+                            <ul class="links">
+                                <li>
+                                    <a href="#">f</a>
+                                    <a href="#">t</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Sponsorship -->
+    <div class="section section-bg-gray lead-left" id="sponsorship">
+
+        <!-- Page Content -->
+        <div class="container">
+            <div class="title">
+                <h2>Sponsorship</h2>
+            </div>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eos, accusantium sequi voluptates deserunt debitis nesciunt fugiat, perspiciatis corporis. Labore consectetur ipsum incidunt consequatur! Eligendi quia consequatur quod magni sit.</h4>
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="#" class="thumbnail">
+                        <img src="//placehold.it/270x200" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#" class="thumbnail">
+                        <img src="//placehold.it/270x200" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#" class="thumbnail">
+                        <img src="//placehold.it/270x200" alt="">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#" class="thumbnail">
+                        <img src="//placehold.it/270x200" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Page Content -->
+    <div class="container">
+        
+        <!-- Club news -->
+        <div class="section" id="news">
+            <div class="title">
+                <h2>Club news</h2>
+            </div>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eos, accusantium sequi voluptates deserunt debitis nesciunt fugiat, perspiciatis corporis. Labore consectetur ipsum incidunt consequatur! Eligendi quia consequatur quod magni sit.</h4>
             <div class="row">
                 <div class="col-md-4">
                     <a href="#" class="thumbnail">
@@ -185,15 +598,236 @@
                 </div>
             </div>
         </div>
+
+    </div>
+    
+    <!-- Quotes -->
+    <div class="section section-bg-gray" id="quotes">
+        
+        <!-- Page Content -->
+        <div class="container">
+            <div id="carousel-quotes" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-quotes" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-quotes" data-slide-to="1"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="//placehold.it/770x200" alt="">
+                        <div class="carousel-caption">
+                            <blockquote>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                <footer>
+                                    <cite title="Oliver Liam">Oliver Liam</cite>, Rider
+                                </footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption">
+                            <img src="//placehold.it/770x200" alt="">
+                            <blockquote>
+                                <p>2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                <footer>
+                                    <cite title="Oliver Liam">Oliver Liam 2</cite>, Rider
+                                </footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-quotes" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-quotes" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Products -->
+        <div class="section" id="products">
+            <div class="title">
+                <h2>Products</h2>
+            </div>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eos, accusantium sequi voluptates deserunt debitis nesciunt fugiat, perspiciatis corporis. Labore consectetur ipsum incidunt consequatur! Eligendi quia consequatur quod magni sit.</h4>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="//placehold.it/568x347" alt="">
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Collapsible Group Item #1
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Collapsible Group Item #2
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Collapsible Group Item #3
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseThree">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
     </div>
+
+    <!-- Notify -->
+    <div class="section notify" id="quote">
+        <div class="container">
+            <div class="col-md-12">
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="container">
+        
+        <!-- Contact us -->
+        <div class="section" id="contacts">
+            <div class="title">
+                <h2>Contact us</h2>
+            </div>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eos, accusantium sequi voluptates deserunt debitis nesciunt fugiat, perspiciatis corporis. Labore consectetur ipsum incidunt consequatur! Eligendi quia consequatur quod magni sit.</h4>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="map">
+                        <img src="//placehold.it/570x278" alt="" width="100%">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <form method="POST" action="#">
+                        <div class="form-group col-md-6 no-padding-left" style="padding:0 7px 0 0;">
+                            <label for="contact-name" class="sr-only">Name</label>
+                            <input type="text" class="form-control" id="contact-name" placeholder="Name">
+                        </div>
+                        <div class="form-group col-md-6 no-padding-right" style="padding:0 0 0 7px">
+                            <label for="contact-email" class="sr-only">Email</label>
+                            <input type="email" class="form-control" id="contact-email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject" class="sr-only">Subject</label>
+                            <input type="text" class="form-control" id="contact-subject" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message" class="sr-only">Message</label>
+                            <textarea class="form-control" rows="3" id="contact-message" placeholder="Text"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-default">Send message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <ul class="info">
+                        <li>PO Box 4668, New York</li>
+                        <li>NY 10163-4456, US</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <div class="icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <ul class="info">
+                        <li>+7 964 335-67-75</li>
+                        <li>+7 964 000-00-00</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <div class="icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <ul class="info">
+                        <li>example@exx.ru</li>
+                        <li>www-qwe@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        
+        <div class="container">
+            <img src="//placehold.it/144x144" alt="">
+            <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quibusdam culpa, aliquid, adipisci tenetur, atque natus distinctio praesentium amet quas autem possimus sit laudantium explicabo blanditiis, libero quaerat provident pariatur?</h5>
+            
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="subscribe-email" class="sr-only">Email</label>
+                    <input type="email" class="form-control" id="subscribe-email" placeholder="Your e-mail here" name="email">
+                </div>
+                <button type="submit" class="btn btn-default">Subscribe</button>
+            </form>
+
+            <div class="btn-group" role="group" aria-label="Social media links">
+                <a href="#" class="btn btn-default">Left</a>
+                <a href="#" class="btn btn-default">Middle</a>
+                <a href="#" class="btn btn-default">Right</a>
+            </div>
+
+            <span class="copyrights">Copyright 2018, RC Crazy Snails. All rights reserved.</span>
+
+        </div>
+
+    </footer>
 
     <!-- Bootstrap core JavaScript -->
     <script src="public/js/jquery.min.js"></script>
     <script src="public/js/bootstrap.min.js"></script>
 
     <script>
-        $('.carousel').carousel()
+        $('.carousel').carousel();
     </script>
 
 </body>
