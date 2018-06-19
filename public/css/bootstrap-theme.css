@@ -4,8 +4,9 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 .btn {
-    padding: 15px 30px;
+    padding: 13px 30px;
     border-width: 2px;
+    height: 50px;
     text-transform: uppercase;
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
@@ -330,6 +331,8 @@ fieldset[disabled] .btn-warning.active {
 .btn-group-sm > .btn,
 .btn-sm {
     border-radius: 0;
+    padding: 8px 28px;
+    height: 40px;
 }
 
 .btn-group .btn+.btn, .btn-group .btn+.btn-group, .btn-group .btn-group+.btn, .btn-group .btn-group+.btn-group {
@@ -498,12 +501,32 @@ fieldset[disabled] .btn-danger.active {
     }
 
       
-} 
+}
+@media (max-width: 990px) {
+    #contacts .form-group:nth-child(1),
+    #contacts .form-group:nth-child(2) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
 @media (min-width: 991px) {
     #events .content,
     #news .content {
         height: 175px;
     } 
+
+    #contacts .form-group:nth-child(1),
+    #contacts .form-group:nth-child(2) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #contacts .form-group:nth-child(1) {
+        padding-right: 7px;
+    }
+    #contacts .form-group:nth-child(2) {
+        padding-left: 7px;
+    }
 }
 @media (max-width: 767px) {
     .navbar .navbar-nav .open .dropdown-menu > .active > a,
@@ -714,12 +737,12 @@ fieldset[disabled] .btn-danger.active {
 /* custom */
 :root {
     --color-black: #000;
-    --color-semi-black: #000000a8;
+    --color-semi-black: #000000a8; /* 0.7 opacity */
     --color-dark-gray: #110f06;
     --color-white: #fff;
     --color-milk: #f7f7f7;
     --color-red: #ec1c24;
-    --color-semi-red: #ea6167;
+    --color-semi-red: #ec1c24a8; /* 0.6 opacity */
 
     --color-bg-slider-news: #141a16;
     --color-bg-header: #0b0f0c;
@@ -957,7 +980,6 @@ html, body {
 
                 #events-last .event-last:hover .icon {
                     right: 0;
-
                 }
 
 #events h3,
@@ -1293,11 +1315,152 @@ html, body {
     }          
 
     #products .panel-heading {
-        padding: 15px 33px;
+        padding: 0;
+        position: relative;
     }
-               
+        #products .panel-heading a {
+            display: block;
+            padding: 15px 33px;
+        }
 
-#map {
-    widows: 570px;
-    height: 278px;
+            #products .panel-heading .fas {
+                color: var(--color-white);
+                position: absolute;
+                top: 15px;
+                right: 33px; 
+            }
+
+            #products .panel-heading a.collapsed + .fas:before {
+                content: "\f067";
+            }
+
+            #products .panel-heading a:not(.collapsed) + .fas:before {
+                content: "\f068";
+            }
+               
+#quote {
+
 }
+    #quote p {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        margin: 0;
+    }
+        #quote p small {
+            font-size: 14px;
+        }
+
+#contacts .form-control:focus {
+    outline: none;
+    border-color: var(--color-red);
+    box-shadow: none;
+}
+
+    #contact-message {
+        max-height: 123px;
+        height: 123px;
+        min-height: 123px;
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+.form-control {
+    border: 1px solid var(--color-black);
+    border-radius: 0;
+}
+    #map {
+        widows: 570px;
+        height: 278px;
+        background: var(--color-milk);
+    }
+
+    #contacts .form {
+        margin-bottom: 60px;
+    }
+
+    #contacts .item {
+        position: relative;
+        padding-left: 70px;
+        height: 70px;
+    }
+        #contacts .icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: var(--color-red);
+            height: 70px;
+            width: 70px;
+            line-height: 70px;
+            color: var(--color-white);
+            font-size: 25px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        #contacts .info {
+            padding: 11px 30px;
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+        }
+            #contacts .info li {
+                list-style-type: none;
+                line-height: 24px;
+            }
+
+#footer {
+    background: var(--color-black);
+    text-align: center;
+}
+
+    footer h5 {
+        color: var(--color-white);
+        margin: 30px 0;
+        font-size: 14px;
+        font-family: 'Open Sans', sans-serif;
+        line-height: 22px;
+    }
+
+    #footer .form-inline {
+        font-size: 0;
+    }
+
+        #subscribe-email {
+            border-width: 2px;
+            min-width: 430px;
+            border-color: var(--color-white);
+            border-radius: 0;
+            background: var(--color-black);
+            color: var(--color-white);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        #footer .btn-group {
+            margin: 40px 0;
+        }
+
+            #footer .social a {
+                border: 0;
+                background: var(--color-red);
+                width: 45px;
+                height: 45px;
+                padding: 0;
+                line-height: 45px;
+                text-align: center;
+                border-radius: 50%;
+                color: var(--color-white);
+            }
+
+            #footer .social a:hover {
+                background: var(--color-white);
+                color: var(--color-red);
+            }
+
+        #footer .copyrights {
+            display: block;
+            color: var(--color-white);
+        }
