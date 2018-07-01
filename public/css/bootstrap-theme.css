@@ -12,6 +12,7 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     border-radius: 0;
+    transition: background 0.5s ease, color 0.5s ease, border-color 0.5s ease;
 }
 
 .btn:focus,
@@ -1184,31 +1185,34 @@ html, body {
     }
 
         #gallery .layer {
-            display: none;
+            display: block;
+            
             position: absolute;
             bottom: 0;
             right: 0;
             top: 0;
             left: 0;
             background: var(--color-red);
-            opacity: 0.77;
+            opacity: 0;
             color: var(--color-white);
             text-align: center;
+            transition: opacity 0.5s ease;
         }
 
         #gallery .image:hover .layer {
-            display: block;
+            opacity: 0.77;
         }
 
             #gallery .layer .title {
-                padding: 30%;
+                padding: 30% 0;
+                font-size: 16px;
             }
 
 #statistics .count {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
-    font-size: 60px;
-    line-height: 60px;
+    font-size: 80px;
+    line-height: 80px;
     margin: 0;
 }
 
