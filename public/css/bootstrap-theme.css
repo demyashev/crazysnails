@@ -580,6 +580,10 @@ fieldset[disabled] .btn-danger.active {
         height: 175px;
     } 
 
+    #team div[class^="col"] {
+        padding-bottom: 30px;
+    }
+
     #contacts .form-group:nth-child(1),
     #contacts .form-group:nth-child(2) {
         padding-left: 0;
