@@ -559,10 +559,21 @@ fieldset[disabled] .btn-danger.active {
         padding-left: 0;
         padding-right: 0;
     }
+
+    *[class^="col"] {
+        padding-bottom: 15px;
+    }
+    
+    #gallery .image,
+    #sponsorship .thumbnail {
+        margin: 0;
+    }
+
+    *[class^="col"]:last-child {
+        padding-bottom: 0;
+    }
 }
 @media (min-width: 991px) {
-
-    
 
     #events .content,
     #news .content {
@@ -583,19 +594,6 @@ fieldset[disabled] .btn-danger.active {
     }
 }
 @media (max-width: 767px) {
-
-    *[class^="col"] {
-        padding-bottom: 15px;
-    }
-    
-    #gallery .image,
-    #sponsorship .thumbnail {
-        margin: 0;
-    }
-
-    *[class^="col"]:last-child {
-        padding-bottom: 0;
-    }
 
     body {
         padding-top: 50px;
