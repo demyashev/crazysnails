@@ -367,6 +367,11 @@ fieldset[disabled] .btn-danger.active {
     border: 0;
     padding: 0;
 }
+
+.thumbnail a > img,
+.thumbnail > img {
+    width: 100%;
+}
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
     background-color: #e8e8e8;
@@ -443,15 +448,25 @@ fieldset[disabled] .btn-danger.active {
 }
 .navbar-brand {
     height: auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 24px;
+    font-family: 'Varsity', sans-serif;
+    font-size: 22px;
     text-transform: uppercase;
 }
 .navbar-default .navbar-brand:focus, 
 .navbar-default .navbar-brand:hover {
-    color: var(--color-semi-red);
+    color: var(--color-red);
+}
+.navbar-default .navbar-toggle:focus, 
+.navbar-default .navbar-toggle:hover {
+    background: transparent;
+    border-color: var(--color-red);
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background: var(--color-white);
+}
+.navbar-default .navbar-toggle:focus .icon-bar,
+.navbar-default .navbar-toggle:hover .icon-bar {
+    background: var(--color-red);
 }
 .navbar-brand,
 .navbar-nav > li > a {
@@ -493,9 +508,35 @@ fieldset[disabled] .btn-danger.active {
     border-color: var(--color-red);
 }
 .navbar-default .navbar-brand {
-    color: var(--color-red);
+    color: var(--color-white);
 }
 @media (min-width: 768px) {
+    body {
+        padding-top: 120px;
+    }
+    .navbar {
+        height: 120px;
+    }
+
+    #carousel-news,
+    #carousel-news .item,
+    #carousel-news .carousel-caption {
+        height: 645px;
+    }
+
+    .navbar-brand {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .navbar-brand img {
+        height: 80px;
+        widows: 132px;
+    }
+
+    .navbar-brand span {
+        display: none;
+    }
     .navbar-nav > li > a {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -519,6 +560,9 @@ fieldset[disabled] .btn-danger.active {
     }
 }
 @media (min-width: 991px) {
+
+    
+
     #events .content,
     #news .content {
         height: 175px;
@@ -538,6 +582,35 @@ fieldset[disabled] .btn-danger.active {
     }
 }
 @media (max-width: 767px) {
+
+    *[class^="col"] {
+        padding-bottom: 15px;
+    }
+    
+    #gallery .image,
+    #sponsorship .thumbnail {
+        margin: 0;
+    }
+
+    *[class^="col"]:last-child {
+        padding-bottom: 0;
+    }
+
+    body {
+        padding-top: 50px;
+    }
+    .navbar-brand {
+        font-size: 22px;
+    }
+
+    .navbar-brand span {
+        display: inline;
+    }
+
+    .navbar-brand img {
+        display: none;
+    }
+
     .navbar .navbar-nav .open .dropdown-menu > .active > a,
     .navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
     .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
@@ -548,6 +621,15 @@ fieldset[disabled] .btn-danger.active {
         background-image:         linear-gradient(to bottom, #337ab7 0%, #2e6da4 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff2e6da4', GradientType=0);
         background-repeat: repeat-x;
+    }
+
+    .carousel-caption {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 }
 .alert {
@@ -780,6 +862,11 @@ html, body {
     background: var(--color-white);
 }
 
+@font-face {
+    font-family: 'Varsity';
+    src: url('/public/fonts/varsity.ttf');
+}
+
 .section {
     padding: 120px 0;
 }
@@ -845,12 +932,9 @@ html, body {
                     color: var(--color-red);
                     text-decoration: underline;
                 }
+    
 
-#carousel-news,
-#carousel-news .item,
-#carousel-news .carousel-caption {
-    height: 645px;
-}
+
 
 .carousel-caption {
     position: relative;
@@ -1123,8 +1207,8 @@ html, body {
 #statistics .count {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 60px;
+    line-height: 60px;
     margin: 0;
 }
 
@@ -1383,6 +1467,10 @@ html, body {
         widows: 570px;
         height: 278px;
         background: var(--color-milk);
+    }
+
+    .gm-style > div > div > div > div > div {
+        background: var(--color-red);
     }
 
     #contacts .form {
