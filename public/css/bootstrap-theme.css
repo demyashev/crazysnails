@@ -512,7 +512,7 @@ fieldset[disabled] .btn-danger.active {
     color: var(--color-white);
 }
 @media (min-width: 768px) {
-    body {
+    body.page-main {
         padding-top: 120px;
     }
     .navbar {
@@ -599,7 +599,7 @@ fieldset[disabled] .btn-danger.active {
 }
 @media (max-width: 767px) {
 
-    body {
+    body.page-main {
         padding-top: 50px;
     }
     .navbar-brand {
@@ -1567,3 +1567,28 @@ html, body {
             display: block;
             color: var(--color-white);
         }
+
+.page-section {}
+
+    .page-title {
+        padding: 90px 0;
+        background: var(--color-dark-gray);
+    }
+
+        .page-title h2 {
+            margin: 0;
+            font-size: 48px;
+            line-height: 48px;
+            color: var(--color-white);
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+            .page-title h2::after {
+                content: "";
+                display: block;
+                width: 75px;
+                height: 7px;
+                background: var(--color-red);
+            }
