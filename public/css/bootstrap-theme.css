@@ -513,7 +513,8 @@ fieldset[disabled] .btn-danger.active {
 }
 @media (min-width: 768px) {
     body.page-main,
-    body.page-section {
+    body.page-section,
+    body.page-item {
         padding-top: 120px;
     }
     .navbar {
@@ -1659,6 +1660,10 @@ html, body {
 
             .page-content .media {
                 background: var(--color-milk);
+            }
+
+            .page-item .media {
+                padding-bottom: 40px;
             }
 
             .page-content .content-item img {
