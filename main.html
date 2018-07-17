@@ -646,10 +646,9 @@
 
     
     <!-- Page Content -->
-    <!-- <div class="container"> -->
+    <div class="container">
 
         <!-- Products -->
-        <!--
         <div class="section" id="products">
             <div class="title">
                 <h2>Атрибутика</h2>
@@ -710,9 +709,8 @@
                 </div>
             </div>
         </div>
-    -->
-        
-    <!-- </div> -->
+
+    </div>
 
     <!-- Notify -->
     <div class="section notify" id="quote">
@@ -838,11 +836,11 @@
         // для всех страниц
         
         $('#menu a').click(function(event) {
-            var target = $(this).attr('href'),
+            var $target = $(this).attr('href'),
                 headerHeight = $('.navbar-header').height();
 
             // scroll не должен зависеть от скорости анимации
-            $.scrollport(target, {mode: 'roll', speed: 500, delta : {top: headerHeight, left: 0}});
+            $.scrollport($target, {mode: 'roll', speed: 500, delta : {top: headerHeight, left: 0}});
         });
     </script>
 
@@ -854,8 +852,6 @@
                 $parent = $this.parents('.panel'),
                 hasClass = $($parent).hasClass('opened'),
                 $panels = $('#products .panel');
-
-                console.log($parent);
 
             $panels.removeClass('opened');
 

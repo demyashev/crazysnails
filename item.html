@@ -55,7 +55,7 @@
 
     <div class="page-title">
         <div class="container">
-            <h2>{{%item_title%}}</h2>
+            <h1>{{%item_title%}}</h1>
         </div>
     </div>
 
@@ -74,8 +74,110 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum harum quos debitis hic eveniet, quod obcaecati quisquam aspernatur, neque veritatis architecto. Ex sit vel facere minima placeat nemo veniam fugiat.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non consequatur voluptas aliquam similique debitis voluptatibus placeat ab aspernatur est alias, ipsa esse repudiandae dolore quidem perferendis rerum ut facilis ex. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt mollitia facere dicta laborum magni. Labore impedit placeat at modi quos! Sunt harum voluptatum quas, perferendis laborum quo eveniet distinctio quidem!</p>
                     </div>
+                    <div class="author">
+                        Опубликовал <a href="#" target="_blank">Кот</a> в категории <a href="#">{{%item_category%}}</a> от 27 июня 2018
+                    </div>
+                    <div class="share">
+                        Поделиться: <a href="#"><i class="fab fa-twitter"></i></a> <a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i class="fab fa-google-plus-g"></i></a> <a href="#"><i class="fab fa-tumblr"></i></a> 
+                    </div>
                 </div>
                 <!-- /item -->
+
+                <!-- comments -->
+                <div class="comments">
+                    <div class="comments-header">
+                        <h3>Комментарии</h3>
+                        <small class="pull-right">2 комментария</small>
+                    </div> 
+                    <section class="comment-list">
+
+                        <article class="row" id="comment-1">
+                            <div class="col-md-2 col-sm-2 hidden-xs">
+                                <figure class="thumbnail">
+                                    <img class="img-responsive" src="//placehold.it/100x100" />
+                                    <figcaption class="text-center">Алексей Беломытцев</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-md-10 col-sm-10">
+                                <div class="panel panel-default left">
+                                    <div class="panel-body">
+                                        <header class="text-left">
+                                            <div class="comment-id">
+                                                <a href="http://{{%site_url%}}/{{item_url}}/#comment-1">#1</a>
+                                            </div>
+                                            <span class="comment-user"><i class="far fa-user"></i> <a href="#" target="_blank">ЗавУч</a></span>
+                                            <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> Дек 16, 2014</time>
+                                        </header>
+                                        <div class="comment-post">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            </p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi repellendus, omnis nisi laboriosam facilis beatae, consectetur nemo quas velit enim consequuntur, quae eius expedita vel, odit sed reprehenderit itaque quo.</p>
+                                        </div>
+                                        <p class="reply">
+                                            <i class="fa fa-reply"></i>
+                                            <a href="#" class="btn btn-link btn-sm">Ответить</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="row" id="comment-2">
+                            <div class="col-md-2 col-sm-2 col-md-offset-1 col-sm-offset-0 hidden-xs">
+                                <figure class="thumbnail">
+                                    <img class="img-responsive" src="//placehold.it/100x100" />
+                                    <figcaption class="text-center">Александр Демяшев</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-md-9 col-sm-10">
+                                <div class="panel panel-default left">
+                                    <div class="panel-body">
+                                        <header class="text-left">
+                                            <div class="comment-id">
+                                                <a href="http://{{%site_url%}}/{{item_url}}/#comment-2">#2</a>
+                                            </div>
+                                            <span class="comment-user"><i class="far fa-user"></i> <a href="#" target="_blank">Кот</a></span>
+                                            <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> Dec 16, 2014</time>
+                                        </header>
+                                        <div class="comment-post">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            </p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum nam a eligendi quam esse, earum ducimus natus porro quas accusantium ex, tempora quasi! Omnis itaque consequuntur blanditiis distinctio asperiores est!</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magnam velit maiores totam quibusdam optio ipsum consectetur voluptatum neque? Modi nobis assumenda ab perferendis placeat. Quas fugiat, similique dolor ullam?</p>
+                                        </div>
+                                        <p class="reply">
+                                            <i class="fa fa-reply"></i>
+                                            <a href="#" class="btn btn-link btn-sm">Ответить</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+
+                    <section class="comments-form">
+                        <h4>Оставьте отзыв</h4>
+                        <p>Вы можете написать всё, что вздумается. Правда, перед публикацией сообщения модерируются 😊</p>
+                        <form method="POST" action="#">
+                            <div class="form-group col-md-6">
+                                <label for="comment-name" class="sr-only">Имя</label>
+                                <input type="text" class="form-control" id="comment-name" placeholder="Имя" autocomplete="name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="comment-email" class="sr-only">Email</label>
+                                <input type="email" class="form-control" id="comment-email" placeholder="Email" autocomplete="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="comment-message" class="sr-only">Сообщение</label>
+                                <textarea class="form-control" rows="3" id="comment-message" placeholder="Сообщение"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-sm">Отправить</button>
+                        </form>
+                    </section>
+                </div>
+                <!-- /comments -->
 
             </div>
 
@@ -201,173 +303,191 @@
                         </a>
                     </div>
                 </div>
-            </div>
-        </div>
+    
+                <div class="block instagram">
+                    <div class="title">
+                        <h3>Инстаграм</h3>    
+                    </div>
+                    <div class="body" id="instafeed"></div>
+                </div>
 
-        
-        
-        
+            </div>
+        </div> 
     </div>
 
-<footer class="page-footer">
-    <div class="content">
-        <div class="container">
-            <div class="row logo">
-                <div class="col-md-12">
-                    <img src="//placehold.it/90x90" alt="">
-                </div>
-            </div>
-            <div class="row info">
-                <div class="col-md-5">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, veritatis reprehenderit laborum assumenda reiciendis dolore nam at totam, repudiandae tempore deserunt, unde ut velit ea, rem. Cum, odit unde facilis.</p>
-                </div>
-                <div class="col-md-5 col-md-offset-2">
-                     <div class="input-group subscribe">
-                        <input type="text" class="form-control" placeholder="Ваш e-mail адрес">
-                        <span class="input-group-btn">
-                            <button class="btn btn-primary btn-send" type="button">Подписаться</button>
-                        </span>
+    <footer class="page-footer">
+        <div class="content">
+            <div class="container">
+                <div class="row logo">
+                    <div class="col-md-12">
+                        <img src="//placehold.it/90x90" alt="">
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 mini-menu">
-                    <div class="title">
-                        <h5>Follow us</h5>
+                <div class="row info">
+                    <div class="col-md-5">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, veritatis reprehenderit laborum assumenda reiciendis dolore nam at totam, repudiandae tempore deserunt, unde ut velit ea, rem. Cum, odit unde facilis.</p>
                     </div>
-                    <ul class="list social">
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-youtube"></i>
-                                <span>Youtube</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-instagram"></i>
-                                <span>Instagram</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-vk"></i>
-                                <span>ВКонтакте</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-tumblr"></i>
-                                <span>Tumblr</span>
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="col-md-5 col-md-offset-2">
+                         <div class="input-group subscribe">
+                            <input type="text" class="form-control" placeholder="Ваш e-mail адрес">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary btn-send" type="button">Подписаться</button>
+                            </span>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-3 mini-menu">
-                    <div class="title">
-                        <h5>About RC Crazy Snails</h5>
+                <div class="row">
+                    <div class="col-md-3 mini-menu">
+                        <div class="title">
+                            <h5>Follow us</h5>
+                        </div>
+                        <ul class="list social">
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>Youtube</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-vk"></i>
+                                    <span>ВКонтакте</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-tumblr"></i>
+                                    <span>Tumblr</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="list">
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-angle-right"></i>
-                                <span>About us</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-angle-right"></i>
-                                <span>Our team</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-angle-right"></i>
-                                <span>Committee</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-angle-right"></i>
-                                <span>Our rules</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mini-menu">
-                    <div class="title">
-                        <h5>Services</h5>
+                    <div class="col-md-3 mini-menu">
+                        <div class="title">
+                            <h5>About RC Crazy Snails</h5>
+                        </div>
+                        <ul class="list">
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>About us</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Our team</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Committee</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Our rules</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="list">
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-angle-right"></i>
-                                <span>Ride</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-angle-right"></i>
-                                <span>Race</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-angle-right"></i>
-                                <span>Training</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-angle-right"></i>
-                                <span>Bike shop</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-3 mini-menu">
-                    <div class="title">
-                        <h5>Event</h5>
+                    <div class="col-md-3 mini-menu">
+                        <div class="title">
+                            <h5>Services</h5>
+                        </div>
+                        <ul class="list">
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Ride</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Race</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Training</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Bike shop</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="list">
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-angle-right"></i>
-                                <span>Upcoming events</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-angle-right"></i>
-                                <span>Result archive</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-angle-right"></i>
-                                <span>Photo gallery</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-angle-right"></i>
-                                <span>Event registration</span>
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="col-md-3 mini-menu">
+                        <div class="title">
+                            <h5>Event</h5>
+                        </div>
+                        <ul class="list">
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Upcoming events</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Result archive</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Photo gallery</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-angle-right"></i>
+                                    <span>Event registration</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="copyright">
-        <div class="container">
-            <div class="col-md-6 privacy-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Return Policy</a>
-                <a href="#">Contact Us</a>
-            </div>
-            <div class="col-md-6 text-right">
-                <span>&copy; 2018. All rights reserved. RC Crazy Snails</span>
+        <div class="copyright">
+            <div class="container">
+                <div class="col-md-6 privacy-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Return Policy</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div class="col-md-6 text-right">
+                    <span>&copy; 2018. All rights reserved. RC Crazy Snails</span>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
+
+    <script async type="text/javascript" src="/public/js/instafeed.min.js"></script>
+
+    <script type="text/javascript">
+        var feed = new Instafeed({
+            get: 'tagged',
+            tagName: 'awesome',
+            clientId: 'af2f94bb12d445b29f38bf56cffc7b5b'
+        });
+        feed.run();
+    </script>
+      
+</body>
+</html>
