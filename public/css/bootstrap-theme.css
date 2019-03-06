@@ -525,6 +525,7 @@ fieldset[disabled] .btn-danger.active {
     #carousel-news .item,
     #carousel-news .carousel-caption {
         height: 645px;
+        background-size: cover;
     }
 
     .navbar-brand {
